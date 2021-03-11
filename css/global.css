@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Global-Document */
+
+/*-------------------------------Page Settings-------------------------------*/
+* {
+	box-sizing: border-box;
+	vertical-align: baseline;
+	outline: 0;
+	border: 0;
+}
+
+html {
+	font-family: "Cinzel";	
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: 'Poppins';
+	color: #363027;
+	font-weight: 400;
+	font-size: 0.95rem;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}

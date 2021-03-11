@@ -1,0 +1,814 @@
+/* CSS Style-Document */
+/* --------------------------------------------------------------------------- Site-Settings */
+
+body {
+	animation: movein 0.6s;
+	animation-iteration-count: 1;
+	background: #71523f;
+	font-family: "Cinzel";
+	font-weight: 700;
+	width: calc(100% - 11px);
+}
+
+#home {
+	background-image: url("../img/home-bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: movein 0.6s;
+	animation-iteration-count: 1;
+}
+
+/* -------------------------------------------------------------- Site-Wrapper */
+
+#site-wrapper {
+	position: relative;
+	width: 960px;
+	margin: 20px auto;
+	background: #fff2eb;
+	box-shadow: 0px 4px 4px -3px rgba(39,35,35,0.2);
+}
+
+
+@keyframes movein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.movein {
+/* Class for smooth Fade-In Animation */
+  animation: movein 0.5s;
+  animation-iteration-count: 1;
+}
+
+/* --------------------------------------------------------------------------- Header */
+
+header {
+	width: 100%;
+	height: 285px;
+	position: relative;
+	margin-bottom: 5px;
+}
+
+#normal-header {
+	background-image: url("../img/home-header.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.gradient-dark {
+	background: -moz-linear-gradient(top, rgba(161,116,88,1) 0%, rgba(161,116,88,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(161,116,88,1) 0%,rgba(161,116,88,0) 100%);
+	background: linear-gradient(to bottom, rgba(161,116,88,1) 0%,rgba(161,116,88,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a17458', endColorstr='#00a17458',GradientType=0 );
+}
+
+.gradient-darker {
+	background: -moz-linear-gradient(top,  rgba(91,82,72,1) 0%, rgba(125,185,232,0) 100%);
+	background: -webkit-linear-gradient(top,  rgba(91,82,72,1) 0%,rgba(125,185,232,0) 100%);
+	background: linear-gradient(to bottom,  rgba(91,82,72,1) 0%,rgba(125,185,232,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5248', endColorstr='#007db9e8',GradientType=0 );
+}
+
+#nav-holder {
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+/* ---------------------------------- About us Header */
+
+.persona-card {
+	height: 100%;
+	width: 192px;
+	position: relative;
+	margin: auto;
+	display: block;
+	float: left;
+}
+
+.persona {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.overlay {
+	background-color: rgba(141, 68, 39, 0.55);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: opacity 0.4s;
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.persona-name {
+	font-family: "Cinzel";
+	font-weight: 700;
+	color: #ffe9e4;
+	font-size: 1.2rem;
+	position: relative;
+	text-align: center;
+	margin-top: 225px;
+	display: block;
+	text-shadow: 2px 1px 4px rgba(40, 34, 27, 0.6);
+}
+
+.persona-name::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-image: url("../img/persona/persona-after.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 11px;
+	width: 110px;
+}
+
+.persona-card:hover .overlay {
+	opacity: 1;
+}
+
+#chris {
+	background-image: url("../img/persona/chris.jpg");
+}
+
+#andy {
+	background-image: url("../img/persona/andy.jpg");
+}
+
+#jan {
+	background-image: url("../img/persona/jan.jpg");
+}
+
+#jim {
+	background-image: url("../img/persona/jim.jpg");
+}
+
+#katrin {
+	background-image: url("../img/persona/katrin.jpg");
+}
+
+
+/* --------------------------------------------------------------------------- Nav */
+
+nav {
+	margin: auto 10px auto auto;
+}
+
+.nav-li {
+	float: left;
+	list-style: none;
+	position: relative;
+	font-size: 0.95rem;
+}
+
+.nav-li-white {
+	float: left;
+	list-style: none;
+	position: relative;
+	font-size: 0.95rem;
+	color: white;
+}
+
+.nav-li::after {
+	content: "·";
+	opacity: 0.45;
+	position: absolute;
+	right: -15px;
+	top: 0;
+}
+
+.nav-li-white::after {
+	content: "·";
+	opacity: 0.45;
+	position: absolute;
+	right: -15px;
+	top: 0;
+	color: white;
+}
+
+.nav-li:last-child::after, .nav-li-white:last-child::after {
+	content: "";
+	position: absolute;
+}
+
+.nav-li + .nav-li, .nav-li-white + .nav-li-white {
+	margin-left: 25px;
+}
+
+.nav-a-normal {
+	color: #282524;
+	position: relative;
+	font-family: "Cinzel";
+}
+
+.nav-a-white {
+	color: #ffffff;
+	position: relative;
+	font-family: "Cinzel";
+}
+
+
+/* ---------------------------------------- Set Active */
+
+.nav-a-normal::after, .nav-a-white::after {
+	content: "";
+	position: absolute;
+	transition: width 0.4s;
+	width: 0px;
+}
+
+.nav-a-normal:hover::after {
+	bottom: -3px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2px;
+	width: 20px;
+	background: #282524;
+}
+
+.nav-a-white:hover::after {
+	bottom: -3px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2px;
+	width: 20px;
+	background: #ffffff;
+}
+
+#active::after {
+	content: "";
+	position: absolute;
+	width: 0px;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2px;
+	width: 20px;
+	background: #282524;
+}
+
+#active-white::after {
+	content: "";
+	position: absolute;
+	width: 0px;
+	bottom: -3px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2px;
+	width: 20px;
+	background: #ffffff;
+}
+
+/* --------------------------------------------------------------------------- Content */
+
+#content {
+	padding: 10px 0px;
+}
+
+.row-container {
+	padding: 10px 0px;
+	margin: 35px 0px 50px 0px;
+}
+
+.row {
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+}
+
+/* --------------------------------- Table */
+
+.table-holder {
+	padding: 10px 0px;
+	margin: 35px 0px 50px 0px;
+}
+
+.galaxie-table {
+	width: 780px;
+	margin: auto;
+	border: none;
+	background: #fff2eb;
+	border-collapse: collapse;
+}
+
+th {
+	color: #fef5e7;
+	border: none;
+	background-color: #363027;
+	font-weight: 700;
+	font-family: "Cinzel";
+}
+
+th, td {
+	border: none;
+	text-align: left;
+	vertical-align: middle;
+	padding: 10px 25px;
+}
+
+td {
+	font-family: 'Poppins';
+	font-weight: 400;
+	color: #363027;
+}
+
+tr:nth-child(even) {
+	border-bottom: solid 1px #363027;
+}
+
+tr:last-child,
+tr:nth-last-child(2):nth-child(even) {
+    border-bottom: none;
+}
+
+.panel {								
+	background-color: #f5e6dd;
+	display: none;
+	opacity: 0;
+}
+
+.panel-open {
+	display: table-row;
+	opacity: 1;
+}
+
+.player {
+	display: block;
+	position: relative;
+}
+
+.cover-galaxie {
+	width: 130px;
+	height: 130px;
+}
+
+.songname, .artist {
+	color: #363027;
+	width: 270px;
+	position: absolute;
+	left: -35px;
+	display: block;
+	margin: 5px 0px;
+}
+
+.songname {
+	font-weight: 700;
+	font-family: "Cinzel";
+	font-size: 1rem;
+	top: -60px;
+	left: -180px;
+}
+
+.artist {
+	font-weight: 400;
+	font-family: 'Poppins';
+	font-size: 0.9rem;
+	top: -40px;
+	left: -180px;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 466px;
+	height: 2px;
+	background: #78746e;
+	outline: none;
+	position: absolute;
+	left: -180px;
+}
+  
+  
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #8d4427;
+	cursor: pointer;
+	border: none;
+}
+  
+.slider::-moz-range-thumb {
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #8d4427;
+	cursor: pointer;
+	border: none;
+}
+
+.timestamp {
+	display: block;
+	float: right;
+	color: #363027;
+	font-weight: 400;
+	font-family: 'Poppins';
+	font-size: 0.9rem;
+	margin: 8px;
+}
+
+.buy, .more {
+	float: right;
+	vertical-align: middle;
+	border: none;
+	border-radius: 100%;
+	cursor: pointer;
+	padding: 4px;
+	font-size: 1.4rem;
+	font-family: 'Material Icons';
+	transition: background-color 0.3s;
+}
+
+.play {
+	float: right;
+	color: #ffe9e4;
+	background: #8d4427;
+	transition: background-color 0.3s;
+	padding: 10px;
+	font-size: 1.2rem;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.play:hover {
+	background-color: #6b331c;
+}
+
+button+button {
+	margin-right: 15px;
+}
+
+.buy {
+	color: white;
+	background-color: #8d4427;
+}
+
+.buy:hover, .buy:active, .buy:focus {
+	color: white;
+	background: #74371f;
+}
+
+.more {
+	color: white;
+	background: #363027;
+}
+
+.more:hover, .more:active, .more:focus {
+	color: white;
+	background: #24201a;
+}
+
+/* --------------------------------- Contact Form */
+
+.input-holder {
+	position: relative;
+	margin: 10px 0px;
+}
+
+.retro-label, .retro-input {
+	display: block;
+}
+
+.retro-label {
+	color: #363027;
+	font-size: 0.95rem;
+	font-weight: 700;
+	font-family: "Cinzel";
+	position: relative;
+	padding-left: 16px;
+}
+
+.retro-label::after {
+	position: absolute;
+	content: "";
+	left: 85px;
+	top: 9px;
+	width: 80px;
+	height: 2px;
+	background: -moz-linear-gradient(left,  rgba(185,159,144,0) 0%, rgba(185,159,144,0.08) 3%, rgba(185,159,144,0.41) 16%, rgba(185,159,144,0.46) 18%, rgba(185,159,144,1) 43%, rgba(185,159,144,0.43) 86%, rgba(185,159,144,0) 100%);
+	background: -webkit-linear-gradient(left,  rgba(185,159,144,0) 0%,rgba(185,159,144,0.08) 3%,rgba(185,159,144,0.41) 16%,rgba(185,159,144,0.46) 18%,rgba(185,159,144,1) 43%,rgba(185,159,144,0.43) 86%,rgba(185,159,144,0) 100%);
+	background: linear-gradient(to right,  rgba(185,159,144,0) 0%,rgba(185,159,144,0.08) 3%,rgba(185,159,144,0.41) 16%,rgba(185,159,144,0.46) 18%,rgba(185,159,144,1) 43%,rgba(185,159,144,0.43) 86%,rgba(185,159,144,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b99f90', endColorstr='#00b99f90',GradientType=1 );
+}
+
+.retro-input {
+	background: #e3d0c6;
+	border: none;
+	padding: 10px 12px;
+	font-weight: 400;
+	font-family: 'Poppins';
+	font-size: 0.9rem;
+	color: #74635a;
+	width: 300px;
+}
+
+.retro-icon {
+	color: #74635a;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 12px;
+}
+
+.retro-textarea {
+	width: 460px;
+	height: 116px;
+	min-height: 116px;
+	max-width: 460px;
+	min-width: 460px;
+	padding: 10px 12px;
+	font-weight: 400;
+	font-family: 'Poppins';
+	font-size: 0.9rem;
+	color: #74635a;
+	background: #e3d0c6;
+}
+
+.retro-button {
+	background-color: #8d4427;
+	text-align: center;
+	padding: 8px 20px;
+	float: right;
+	margin: 10px 0px;
+	color: #fff1db;
+	font-size: 0.95rem;
+	font-weight: 700;
+	font-family: "Cinzel";
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.retro-button:hover {
+	background-color: #6b331c;
+}
+
+
+/* --------------------------------------------------------------------------- Content Cards on home */
+
+.card {
+	width: 220px;
+	height: 260px;
+	margin: auto;
+	position: relative;
+	transition: transform 0.3s;
+}
+
+#first-card {
+	margin-left: 90px;
+}
+
+#last-card {
+	margin-right: 90px;
+}
+
+.card:hover {
+	transform: scale(1.04);
+}
+
+.card-inner {
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.card-text {
+	font-family: "Cinzel";
+	font-weight: 400;
+	padding: 9px 0px;
+	width: 220px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.text-container {
+	width: 380px;
+	margin-top: 0;
+	margin: auto;
+}
+
+#first-text {
+	margin-left: 90px;
+	margin-top: 0;
+	margin-right: auto;
+	position: relative;
+}
+
+#last-text {
+	margin-right: 90px;
+	margin-top: 0;
+	margin-left: auto;
+	position: relative;
+}
+
+.content-headline {
+	color: #363027;
+	font-size: 1.1rem;
+	font-family: "Cinzel";
+	font-weight: 700;
+	margin: 0 0 25px 90px;
+	position: relative;
+}
+
+.content-headline::after {
+	position: absolute;
+	content: "";
+	background-image: url("../img/headline-underline.png");
+	width: 170px;
+	height: 10px;
+	left: -10px;
+	bottom: -15px;
+}
+
+/* -------------------- Color settings for cards and imgs */
+
+#cover {
+	color: #ffffff;
+	background: #272323;
+}
+
+.cover-img {
+	background-image: url("../img/cover.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#band {
+	color: #fff2df;
+	background: #363027;
+}
+
+#contact {
+	color: #ffe2dc;
+	background: #5f4334;
+}
+
+/* --------------------------------------------------- Slider Model */
+
+#slider-holder {
+	position: relative;
+}
+
+.img-slider {
+	opacity: 0;
+	transition: opacity 0.4s;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* --------------------------------------------------- Page-Titel */
+
+#headline-holder {
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#headline-holder::after {
+	content: "";
+	background-image: url("../img/divider-lg.png");
+	height: 13px;
+	width: 567px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#page-title {
+	font-family: "Cinzel";
+	font-weight: 700;
+	color: #282524;
+	position: relative;
+	display: inline-block;
+	margin: 5px 0px;
+}
+
+#page-title::after {
+	content: "";
+	background: -moz-linear-gradient(left, rgba(54,48,39,1) 63%, rgba(54,48,39,0) 100%);
+	background: -webkit-linear-gradient(left, rgba(54,48,39,1) 63%,rgba(54,48,39,0) 100%);
+	background: linear-gradient(to right, rgba(54,48,39,1) 63%,rgba(54,48,39,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#363027', endColorstr='#00363027',GradientType=1 );
+	height: 2px;
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	right: -215px;
+}
+
+#page-title::before {
+	content: "";
+	background: -moz-linear-gradient(left, rgba(54,48,39,0) 0%, rgba(54,48,39,1) 37%);
+	background: -webkit-linear-gradient(left, rgba(54,48,39,0) 0%,rgba(54,48,39,1) 37%);
+	background: linear-gradient(to right, rgba(54,48,39,0) 0%,rgba(54,48,39,1) 37%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00363027', endColorstr='#363027',GradientType=1 );
+	height: 2px;
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	left: -215px;
+}
+
+/* ------------------------------------------------------------------------- Footer */
+
+footer {
+	background: #71523f;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	display: -ms-flexbox;
+	position: relative;
+}
+
+#footer-inner {
+	margin: auto;
+}
+
+.footer-a {
+	color: #ffe9db;
+	text-align: center;
+	font-family: "Cinzel";
+	font-weight: 700;
+	position: relative;
+	font-size: 0.95rem;
+}
+
+.footer-a + .footer-a {
+	margin-left: 30px;
+}
+
+.footer-a::after {
+	content: "";
+	width: 0px;
+	height: 2px;
+	background: #ffe9db;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: width 0.3s;
+}
+
+.footer-a:hover::after {
+	width: 28px;
+}
+
+/* -------------------------------------- Footer-Before-Element */
+
+footer::before {
+	content: "";
+	background-image: url("../img/divider-lg.png");
+	height: 13px;
+	width: 567px;
+	position: absolute;
+	top: -35px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Animation-Document for "Die Retrofuturisten" */
+
+@keyframes movein {
+  0% {opacity: 0;}
+  50% {opacity: 0.35;}
+  85% {opacity: 85;}
+  100% {opacity: 1;}
+}
+
+.movein {
+/* Class for smooth Fade-In Animation */
+  animation: movein 0.5s;
+  animation-iteration-count: 1;
+}
